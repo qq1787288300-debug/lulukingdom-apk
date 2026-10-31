@@ -30,12 +30,6 @@ jobs:
       - name: First pass (download SDK/NDK)
         run: buildozer android debug || true
 
-      - name: Accept Android SDK licenses
-        run: |
-          SDKM=$(find ~/.buildozer/android/platform/android-sdk -name sdkmanager -type f | head -n1)
-          echo "sdkmanager: $SDKM"
-          yes | "$SDKM" --licenses > /dev/null
-
       - name: Build debug APK
         run: buildozer -v android debug
 

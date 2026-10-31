@@ -16,6 +16,7 @@ android.permissions = INTERNET,ACCESS_NETWORK_STATE
 android.api = 34
 android.ndk_api = 24
 android.minapi = 24
+android.accept_sdk_license = True
 
 
 [buildozer]
