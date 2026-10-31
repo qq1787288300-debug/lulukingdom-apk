@@ -6,7 +6,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 1.0
 
-requirements = python3,kivy==2.3.0,websocket-client
+requirements = python3,kivy==2.3.1,websocket-client
 
 orientation = portrait
 fullscreen = 0
