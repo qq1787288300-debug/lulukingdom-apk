@@ -3,7 +3,7 @@ title = LuLuKingdom
 package.name = lulukingdom
 package.domain = org.example
 source.dir = .
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg,kv,atlas,ttf
 version = 1.0
 
 requirements = python3,kivy==2.3.1,websocket-client
