@@ -146,6 +146,8 @@ class MainLayout(BoxLayout):
             text="\n".join([
                 "wss://boom-ljj.lululu.com.cn/ws?token=6b2167df9d73a9af842703ea335e271f&userid=62238431",
                 "wss://boom-ljj.lululu.com.cn/ws?token=b4e53efe7d8bceb7d862316324648e13&userid=15384828",
+                "wss://boom-ljj.lululu.com.cn/ws?token=801470dcea83d2f438d12dba41c55d4f&userid=85103555",
+                "wss://boom-ljj.lululu.com.cn/ws?token=153390657f54b6441ca28b673b0d22d3&userid=51984281"
             ]),
             background_color=INPUT_BG, foreground_color=TEXT,
             cursor_color=PRIMARY, font_size=sp(12), font_name="CJK",
