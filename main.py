@@ -63,12 +63,18 @@ class ThemeLabel(Label):
 
 class ThemeInput(TextInput):
     def __init__(self, **kw):
+        multiline = kw.pop("multiline", False)
+        if not multiline:
+            kw.setdefault("size_hint_y", None)
+            kw.setdefault("height", dp(38))
         super().__init__(font_name="CJK",
+                         multiline=multiline,
                          background_color=INPUT_BG,
                          foreground_color=TEXT,
                          cursor_color=PRIMARY,
                          selection_color=(0.3, 0.55, 1.0, 0.35),
-                         font_size=sp(14), padding=[dp(10), dp(10)],
+                         font_size=sp(14),
+                         padding=[dp(10), dp(8)],
                          **kw)
 
 
@@ -143,6 +149,7 @@ class MainLayout(BoxLayout):
             ]),
             background_color=INPUT_BG, foreground_color=TEXT,
             cursor_color=PRIMARY, font_size=sp(12), font_name="CJK",
+            size_hint_y=None, height=dp(110),
             padding=[dp(10), dp(10)],
         )
         card2.add_widget(self.urls_text)
