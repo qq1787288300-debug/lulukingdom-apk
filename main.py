@@ -40,8 +40,10 @@ LOG_BG = (0.07, 0.08, 0.10, 1)
 class Card(BoxLayout):
     """圆角卡片容器"""
     def __init__(self, **kwargs):
-        super().__init__(orientation="vertical", padding=dp(14),
-                         spacing=dp(10), **kwargs)
+        kwargs.setdefault("orientation", "vertical")
+        kwargs.setdefault("padding", dp(14))
+        kwargs.setdefault("spacing", dp(10))
+        super().__init__(**kwargs)
         with self.canvas.before:
             Color(*CARD)
             self._bg = RoundedRectangle(radius=[dp(12)])
@@ -53,19 +55,16 @@ class Card(BoxLayout):
 
 
 class ThemeLabel(Label):
-    font_name = "CJK"
-
     def __init__(self, text="", size=None, color=TEXT, bold=False, **kw):
-        super().__init__(text=text, color=color, bold=bold,
+        super().__init__(text=text, color=color, bold=bold, font_name="CJK",
                          font_size=sp(14) if not bold else sp(15),
                          size_hint_y=None, height=size or dp(24), **kw)
 
 
 class ThemeInput(TextInput):
-    font_name = "CJK"
-
     def __init__(self, **kw):
-        super().__init__(background_color=INPUT_BG,
+        super().__init__(font_name="CJK",
+                         background_color=INPUT_BG,
                          foreground_color=TEXT,
                          cursor_color=PRIMARY,
                          selection_color=(0.3, 0.55, 1.0, 0.35),
@@ -74,10 +73,8 @@ class ThemeInput(TextInput):
 
 
 class ThemeButton(Button):
-    font_name = "CJK"
-
     def __init__(self, text, color, disabled_color=DISABLED, **kw):
-        super().__init__(text=text, font_size=sp(15), bold=True,
+        super().__init__(text=text, font_name="CJK", font_size=sp(15), bold=True,
                          background_normal="", background_down="",
                          background_color=color, color=(1, 1, 1, 1), **kw)
         with self.canvas.before:
