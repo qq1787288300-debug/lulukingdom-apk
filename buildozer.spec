@@ -18,6 +18,10 @@ android.ndk_api = 24
 android.minapi = 24
 android.accept_sdk_license = True
 
+# 使用官方 develop 分支的 python-for-android（新版通过 pip --platform 安装安卓 wheel，兼容新 pip）
+p4a.url = https://github.com/kivy/python-for-android.git
+p4a.branch = develop
+
 
 [buildozer]
 log_level = 2
